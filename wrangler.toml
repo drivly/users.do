@@ -1,0 +1,14 @@
+name = "users"
+account_id = "b6641681fe423910342b9ffa1364c76d"
+main = "worker.js"
+usage_model = "unbound"
+compatibility_date = "2022-06-21"
+
+[durable_objects]
+  bindings = [
+    { name = "KVDB", class_name = "KVDB" }
+  ]
+
+[[migrations]]
+  tag = "v1"
+  new_classes = ["KVDB"]
